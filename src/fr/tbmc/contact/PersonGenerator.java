@@ -11,11 +11,11 @@ import java.util.Random;
 public class PersonGenerator {
 
 
-    public static void generateXPersonne(GestionnaireContacts g, int nbPersonnes) {
+    public static void generateXPersonnes(GestionnaireContacts g, int nbPersonnes) {
         for(int i = 0; i < nbPersonnes; i++) {
-            addPersonne(g,
+            ajouterPersonne(g,
                     randomString(5), randomString(7),
-                    NumTel.TypeTel.PORTABLE, randomNum(),
+                    NumTel.TypeTel.PORTABLE, randomNum(10),
                     randomString(5), randomString(3),
                     random(0, 150), randomString(7),
                     random(10000, 100000), randomString(5)
@@ -23,7 +23,7 @@ public class PersonGenerator {
         }
     }
 
-    public static void addPersonne(
+    public static void ajouterPersonne(
             GestionnaireContacts g,
             String nom, String prenom,
             NumTel.TypeTel typeTel, String numeroTel,
@@ -60,8 +60,8 @@ public class PersonGenerator {
         return randomStr(97, 122, size);
     }
 
-    public static String randomNum() {
-        return randomStr(48, 57, 10);
+    public static String randomNum(int size) {
+        return randomStr(48, 57, size);
     }
 
 }
