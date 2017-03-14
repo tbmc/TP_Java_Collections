@@ -30,6 +30,7 @@ public class Personne implements Comparable<Personne> {
         return anniversaire;
     }
 
+    @Override
     public String toString() {
         return prenom + " " + nom + " : " +
                 anniversaire.get(Calendar.DAY_OF_MONTH) + "/" +

@@ -19,4 +19,10 @@ public class Email {
     public String getDomain() {
         return domain;
     }
+
+    @Override
+    public String toString() {
+        return identifiant + "." + domain;
+    }
+
 }

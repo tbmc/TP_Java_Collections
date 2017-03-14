@@ -32,4 +32,9 @@ public class Mail {
     public String getVille() {
         return ville;
     }
+
+    public String toString() {
+        return numero + " rue " + rue + ", " + codepostal + ", " + ville;
+    }
+
 }

@@ -26,4 +26,10 @@ public class Contact {
     public Mail getMail() {
         return mail;
     }
+
+    @Override
+    public String toString() {
+        return numTel + " ; " + email + " ; " + mail;
+    }
+
 }

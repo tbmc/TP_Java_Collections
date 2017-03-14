@@ -56,4 +56,21 @@ public class GestionnaireContacts {
         return true;
     }
 
+
+    public String personneToString(Personne p) {
+        Contact c = contact(p);
+        return p + "\n" + c;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        Set<Personne> pp = personnes();
+        for(Personne p : pp) {
+            sb.append(personneToString(p));
+            sb.append("\n\n");
+        }
+        return sb.toString();
+    }
+
 }
